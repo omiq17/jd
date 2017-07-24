@@ -1,0 +1,105 @@
+<%- include header.html -%>
+
+<div id="admin" class="container">
+    <!--<div class="menu">
+        <ul>
+            <li>Insert Member</li>
+            <li>Insert Archive</li>
+            <li>Insert Blog Post</li>
+        </ul>
+    </div>-->
+    <form id="insertMember" action="/insertMember" method="post"> 
+        <h2><b>Insert Member</b></h2>
+        <div class="form-group">
+            <label>Member Name</label>
+            <input class="form-control" name="memName" required>
+        </div>
+        <div class="form-group">
+            <label>Member Versity Id</label>
+            <input type="number" class="form-control" name="memId" required>
+        </div>
+        <div class="form-group">
+            <label>Member Rank</label>
+            <input class="form-control" name="memRank" required>
+        </div>
+        <div class="form-group">
+            <label>Member Skills (Comma Separated)</label>
+            <input class="form-control" name="memSkills" required>
+        </div>
+        <div class="form-group">
+            <label>Member Picture Link</label>
+            <input class="form-control" name="memPic" required>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    <!--Archive Form-->
+    <form id="insertArchive" action="/insertArchive" method="post"> 
+        <h2><b>Insert Archive</b></h2>
+        <div class="form-group">
+            <label>Archive Name</label>
+            <input class="form-control" name="arcName" required>
+        </div>
+        <div class="form-group">
+            <label>Program Id To Append</label>
+            <a href="/showid" target="_blank">Show Program Id's</a>
+            <input class="form-control" name="progId" required>
+        </div>
+        <div class="form-group">
+            <label>Archive Type</label> <br>
+            <input type="radio"  name="arcType" value="Image" required> Image <br>            
+            <input type="radio"  name="arcType" value="Audio"> Audio <br>
+            <input type="radio"  name="arcType" value="Video"> Video <br>
+        </div>
+        <div class="form-group">
+            <label>Archive Description</label>
+            <input class="form-control" name="arcDes" required>
+        </div>
+        <div class="form-group">
+            <label>Archive Image Link</label>
+            <input class="form-control" name="arcLink" required>
+        </div>
+        <div class="form-group">
+            <label>Archive Video Link (If type is video)</label>
+            <input class="form-control" name="arcVid" >
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+    <!--Program Form-->
+    <form id="insertProgram" action="/insertProgram" method="post"> 
+        <h2><b>Insert Program</b></h2>
+        <div class="form-group">
+            <label>Program Id(Should be unique)</label>
+            <input class="form-control" name="progId" required>
+        </div>
+        <div class="form-group">
+            <label>Program Title</label>
+            <input class="form-control" name="progTitle" required>
+        </div>
+        <div class="form-group">
+            <label>Program Type</label> <br>
+            <input type="radio"  name="progType" value="Cultural" required> Cultural  <br>
+            <input type="radio"  name="progType" value="Music"> Music <br>
+            <input type="radio"  name="progType" value="Dance"> Dance <br>
+            <input type="radio"  name="progType" value="Other"> Other <br>            
+        </div>
+        <div class="form-group">
+            <label>Program Description</label>
+            <textarea class="form-control" rows="7" name="progDes" required></textarea>
+        </div>
+        <div class="form-group">
+            <label>Program Date</label>
+            <input type="date" class="form-control" name="progDate" required>
+        </div>
+        <div class="form-group">
+            <label>Program Picture LInk</label>
+            <input class="form-control" name="progPic" required>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+
+</div>
+
+
+<%- include footer.html -%>
