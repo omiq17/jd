@@ -19,7 +19,7 @@
         } else {
             $("#myModal iframe").remove();        
             $("#myModal img").remove();        
-            var $e = '<iframe width="800" height="400" src="'+data.video+'" style = "display:block; margin:auto;" frameborder="0" allowfullscreen></iframe>';  
+            var $e = '<iframe modal-content src="'+data.video+'" style = "display:block; margin:auto;" frameborder="0" allowfullscreen></iframe>';  
             $("#myModal span").after($e);
           }
           captionText.innerHTML = data.name;          
