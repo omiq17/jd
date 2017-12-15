@@ -140,9 +140,9 @@ router.get('/contact', function(req, res, next) {
 });
 
 /* Admin Section */
-router.get('/admin', function(req, res, next) {
-  res.render('admin', {page: '/admin' });
-});
+// router.get('/admin', function(req, res, next) {
+//   res.render('admin', {page: '/admin' });
+// });
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // REST API Post works
